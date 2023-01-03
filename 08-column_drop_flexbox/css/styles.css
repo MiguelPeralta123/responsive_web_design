@@ -48,3 +48,27 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 480px) {
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        
+        /* Esta propiedad hace que las dos primeras columnas tomen el 50% del total, en vez del 50% del 30% */
+        flex-wrap: wrap;
+    }
+
+    .contenedor main,
+    .first-aside {
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor main,
+    .first-aside,
+    .second-aside {
+        /* Esta es otra forma del flex-basis, toma los valores flex-grow, flex-shrink y flex-basis */
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+}
