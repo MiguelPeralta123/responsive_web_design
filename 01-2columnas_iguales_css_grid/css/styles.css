@@ -40,6 +40,9 @@ h1 {
 
 /** CODIGO AQUI **/
 
+/* CSS Grid crea una especie de tabla en la que podemos acomodar los elementos. Podemos definir filas y columnas, así como sus medidas y posiciones, etc.
+En este ejercicio vamos a crear dos columnas iguales */
+
 @media (min-width: 768px) {
     .contenedor {
         display: grid;

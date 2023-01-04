@@ -49,6 +49,8 @@ p {
 
 /** CODIGO AQUI **/
 
+/* Column drop permite que conforme la pantalla vaya creciendo, las filas se transformen en columnas */
+
 @media (min-width: 480px) {
     .contenedor {
         display: flex;

@@ -48,3 +48,45 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/* Layout shifter se refiere a poder cambiar la posición de los elementos conforme la pantalla crezca. Podemos hacer columnas, filas, reubicarlas, etc. */
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+
+        /* Column-reverse organiza los elementos en una columna empezando por el último, es decir, cambia el orden de los elementos HTML */
+        flex-direction: column-reverse;
+    }
+
+    .contenedor main {
+        display: flex;
+        justify-content: space-between;
+
+        /* column-gap: 2rem; Tambien se puede usar esto para separar */
+    }
+
+    .contenedor main .entrada-blog {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contenedor main {
+        /* Volvemos a hacer que main sea una columna y no dos */
+        flex-direction: column;
+        flex: 0 0 calc(66.6% - 2rem);
+
+        /* Cambiamos el orden de los elementos recorriendo main a la izquierda */
+        order: -1;
+    }
+
+    .contenedor aside {
+        flex: 0 0 calc(33%);
+    }
+}

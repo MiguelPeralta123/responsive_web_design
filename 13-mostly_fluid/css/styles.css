@@ -37,3 +37,30 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/* Mostly fluid se refiere a hacer que el contenido fluya con la página. Es decir, los elementos no cambian ni se reacomodan, pero el contenido se debe adaptar al tamaño de la pantalla.
+Este ejercicio no requiere grid ni flex */
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Estos media query son opcionales, lo que hacen es aumentar los márgenes en una tablet o una computadora */
+
+@media (min-width: 768px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+@media (min-width: 922px) {
+    .contenedor {
+        width: 60%;
+    }
+}

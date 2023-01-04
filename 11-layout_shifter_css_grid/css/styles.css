@@ -49,3 +49,50 @@ p {
 
 
 /** CODIGO AQUI **/
+
+/* Layout shifter se refiere a poder cambiar la posición de los elementos conforme la pantalla crezca. Podemos hacer columnas, filas, reubicarlas, etc. */
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        
+        /* Agrupamos el contenido en áreas */
+        grid-template-areas: "contenido"
+                             "inferior";
+    }
+
+    .contenedor main {
+        /* Le asignamos a los elementos un área dónde colocarse */
+        grid-area: contenido;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .contenedor aside {
+        /* Le asignamos a los elementos un área dónde colocarse */
+        grid-area: inferior;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor {
+        grid-template-areas: "contenido sidebar";
+        column-gap: 2rem;
+    }
+
+    .contenedor main {
+        grid-area: contenido;
+
+        /* Creamos dos áreas para que las entradas se coloquen una encima de la otra */
+        grid-template-areas: "entrada1"
+                             "entrada2";
+
+        /* Ya que habíamos definido dos columnas, tenemos que "deshacerlas" con este unset */
+        grid-template-columns: unset;
+    }
+
+    .contenedor aside {
+        grid-area: sidebar;
+    }
+}

@@ -49,3 +49,21 @@ p {
 
 
 /** CODIGO AQUI **/
+
+/* Como la mayoría de los sitios web, mostramos el elemento principal junto con un aside. El contenido principal será tres veces más grande */
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        column-gap: 4rem;
+    }
+
+    .contenedor article {
+        /* El primer valor de flex es el crecimiento, en este ejemplo, .contenedor article recibe 3px por cada px que recibe .contenedor aside */
+        flex: 3;
+    }
+
+    .contenedor aside {
+        flex: 1;
+    }
+}

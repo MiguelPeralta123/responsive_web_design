@@ -48,3 +48,20 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/* Como la mayoría de los sitios web, mostramos el elemento principal junto con un aside. El contenido principal será tres veces más grande */
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 4rem;
+
+        /* Coloca el contenido en una misma columna en vez de crear columnas nuevas (siempre y cuando los espacios estén libres) */
+        grid-auto-flow: column;
+    }
+
+    .contenedor aside {
+        grid-column: 2 / 3;
+    }
+}

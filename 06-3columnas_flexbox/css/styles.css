@@ -49,6 +49,8 @@ p {
 
 /** CODIGO AQUI **/
 
+/* Creamos tres columnas, la central es de contenido y será mas grande. Todos los diseños son responsive */
+
 @media (min-width: 768px) {
     .contenedor {
         display: flex;

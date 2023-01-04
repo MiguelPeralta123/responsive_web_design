@@ -50,3 +50,19 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/* Tiny tweaks se refiere a "pequeños cambios", por ejemplo, si tenemos el mismo tamaño de fuente para un celular que para una computadora, la letra sería muy grande en el celular o muy pequeña en la computadora.
+Lo que se hace es disminuir el font-size conforme la pantalla vaya decreciendo.
+Este ejercicio no requiere grid ni flex */
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        text-align: left;
+        font-size: 6rem;
+    }
+}

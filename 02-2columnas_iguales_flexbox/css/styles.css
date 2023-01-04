@@ -40,6 +40,9 @@ h1 {
 
 /** CODIGO AQUI **/
 
+/* CSS Flex hace que los elementos sean flexibles y por lo tanto, podemos estirarlos o acortarlos para que ocupen más o menos espacio. También podemos reacomodarlos, etc.
+En este ejercicio vamos a crear dos columnas iguales */
+
 @media (min-width: 768px) {
     .contenedor {
         display: flex;

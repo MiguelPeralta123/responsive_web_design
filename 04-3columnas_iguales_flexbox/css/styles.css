@@ -40,6 +40,8 @@ h1 {
 
 /** CODIGO AQUI **/
 
+/* En este ejercicio vamos a crear tres columnas iguales con css flex */
+
 @media (min-width: 768px) {
     .contenedor {
         display: flex;
